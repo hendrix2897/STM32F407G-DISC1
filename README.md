@@ -1,0 +1,2 @@
+# STM32F407G-DISC1
+Forked from another git found long ago. STM32F4-Discovery MP3 playbackInstall: sudo apt-get install gcc-arm-none-eabi make (Arch gcc name might vary) Git clone this &amp; make.Upload with OpenOCD.NOTE:bin2hex converts a random mp3 file to a char bin_data[] C array. This is good, but NOT REALLY !.Once generating the mp3_data.c file, edit it to change char bin_data[] to const char mp3_data[]. (mp3_data is hardcoded in project ld script and without const its going to try to upload to RAM).After modifying, copy the fily to $PROJECT_PATH/src and make.
